@@ -7,16 +7,17 @@ import {Route, Switch } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import Page from '../containers/Page';
 import Header from '../components/header';
-import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
-import 'antd-mobile/lib/tabs/style/index.css'
+// import { Tabs, WhiteSpace, Badge } from 'antd-mobile';
+// import 'antd-mobile/lib/tabs/style/index.css'
+import { Tabs } from 'antd';
 import  '../assets/css/my.less'
 
 const icon = require('../assets/img/2.jpg')
-const tabs = [
-  { title: <Badge text={'3'}>First Tab</Badge> },
-  { title: <Badge text={'今日(20)'}>Second Tab</Badge> },
-  { title: <Badge dot>Third Tab</Badge> },
-];
+// const tabs = [
+//   { title: <Badge text={'3'}>First Tab</Badge> },
+//   { title: <Badge text={'今日(20)'}>Second Tab</Badge> },
+//   { title: <Badge dot>Third Tab</Badge> },
+// ];
 class Home extends Component{
   state={
     hasError:false,
@@ -47,7 +48,7 @@ class Home extends Component{
         <button style={{backgroundColor:'#eee'}} onClick={()=>add(count+1)}>增加</button>
         <Link to='/user'>User</Link> <br />
         <Link to='/anime'>Anime</Link>
-        <Tabs tabs={tabs}
+        {/* <Tabs tabs={tabs}
           initialPage={1}
           onChange={(tab, index) => { console.log('onChange', index, tab); }}
           onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
@@ -61,7 +62,7 @@ class Home extends Component{
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '150px', backgroundColor: '#fff' }}>
             Content of third tab
           </div>
-        </Tabs>
+        </Tabs> */}
       </div>
     )
   }

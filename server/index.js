@@ -52,6 +52,8 @@ console.log(`\n==> 🌎  Listening on port ${port}. Open up http://localhost:${p
 // koa 渲染按需加载
 Loadable.preloadAll().then(() => {
   app.listen(port)
-})
+}).catch(err => {
+  console.log(err);
+});
 
 

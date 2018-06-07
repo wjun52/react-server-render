@@ -18,10 +18,10 @@ const prodConfig={
     vendors:['react','react-dom','react-loadable','react-redux','redux','react-router-dom','react-router-redux','redux-thunk', 'react-helmet'],
   },
   output:{
-    filename:'[name].[hash:8].js',
+    filename:'js/[name].[hash:8].js',
     path:path.resolve(rootPath,'./dist'),
     publicPath:'/',
-    chunkFilename: '[name]-[hash:8].js',
+    chunkFilename: 'js/[name]-[hash:8].js',
     // libraryTarget: isServer?'commonjs2':'umd',
   },
   resolve:{
@@ -45,7 +45,7 @@ const prodConfig={
             plugins: [
               'transform-runtime',
               'add-module-exports',
-              ["import", [{ "style": true, "libraryName": "antd-mobile" }]]
+              ["import", [{ "style": true,libraryDirectory: 'es', "libraryName": "antd-mobile" }]]
             ],
             cacheDirectory: true,
           }
