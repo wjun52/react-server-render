@@ -20,9 +20,10 @@ require('babel-register')({
 // Image required hook
 require('asset-require-hook')({
   extensions: ['jpg', 'png', 'gif', 'webp'],
-  limit: 8000
+  limit: 1024,
+  name: 'img/[hash:base64:32].[ext]'
 })
-
+require('jsdom');
 const Koa = require('koa');
 const app = new Koa();
 const clientRouter = require('./clientRouter.js').default;

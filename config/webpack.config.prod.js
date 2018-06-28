@@ -110,7 +110,7 @@ const prodConfig={
           loader: 'url-loader',
           options: {
             limit: 1024,
-            name: 'img/[sha512:hash:base64:7].[ext]'
+            name: 'img/[hash:base64:32].[ext]'
           }
         }
       }
