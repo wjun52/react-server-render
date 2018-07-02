@@ -1,8 +1,0 @@
-{
-  "ignore": {
-    "koa": {
-      "versions": "2.5.1",
-      "reason": ""
-    }
-  }
-}

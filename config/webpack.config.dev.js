@@ -3,7 +3,6 @@ const webpack=require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const rootPath=path.join(__dirname,'../');
 const theme = require('../package.json').theme;
@@ -132,9 +131,6 @@ const devConfig={
     new HtmlWebpackPlugin({
       filename:'index.html',
       template:'./index.ejs',
-    }),
-    new ReactLoadablePlugin({
-      filename: path.join(rootPath, './dist/react-loadable.json'),
     }),
   ],
 }
